@@ -1,0 +1,10 @@
+CURSO CYPRESS.
+
+1.- npm install cypress --save-dev  --> Instalación
+
+2.- npm install -g npx  --> Instalar NPX
+2.1--> npx cypress install --force  --> Forzar Instalación para actualizar
+
+3.- npx cypress open  --> Abrir Cypress
+
+4.- Parar Consola --> Ctrl + C
