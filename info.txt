@@ -8,3 +8,12 @@ CURSO CYPRESS.
 3.- npx cypress open  --> Abrir Cypress
 
 4.- Parar Consola --> Ctrl + C
+
+5.- npm install -D cypress-xpath --> Usar xpath
+    require('cypress-xpath')
+    Extención SelectorsHub -- Extención para Xpath
+
+6.- npm install -D cypress-plugin-tab --> Usar tab 
+    require('cypress-plugin-tab')
+
+7.- CSS and XPath checker --> Extención para selectores
