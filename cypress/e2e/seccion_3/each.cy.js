@@ -42,19 +42,26 @@ describe('Bucles For y Each', () =>{
 
   it.only("Each tres", () =>{
     let tiempo=1000
+    const datos=[]
     cy.visit('https://www.tiendaauka.com/productos/')
     cy.title().should('eq','Comprá online productos en auka.tienda')
     cy.wait(tiempo)
 
-    for(let i=0; i<=3; i++){
-      cy.get(".item-info").eq(i).click()
-      cy.wait(tiempo)
-      cy.get('.js-prod-submit-form').should('be.visible').click()
-      cy.get('.js-cart-quantity-input').should('be.visible').clear().type(4)
-      cy.get('#ajax-cart-submit-div > .btn').should('be.visible').click()
-      cy.wait(tiempo)
-      cy.visit('https://www.tiendaauka.com/productos/')
-    }
+    cy.get(".item-info").each(($el,index,$list) =>{      
+      datos[index]=$el.text()      
+    }).then(() =>{
+      for(let i=0; i<=datos.length-1; i++){
+        cy.get(".item-info").eq(i).click()
+        cy.wait(tiempo)
+        cy.get('.js-prod-submit-form').should('be.visible').click()
+        cy.get('.js-cart-quantity-input').should('be.visible').clear().type(4)
+        cy.get('#ajax-cart-submit-div > .btn').should('be.visible').click()
+        cy.wait(tiempo)
+        cy.visit('https://www.tiendaauka.com/productos/')
+      }
+    })
+
+    
   })
   
 })
