@@ -24,7 +24,49 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('texto_visible', (selector, texto, tiempo) => {
+Cypress.Commands.add('Texto', (selector, texto, tiempo) => {
     cy.get(selector).should('be.visible').type(texto)
     cy.wait(tiempo)
+})
+
+Cypress.Commands.add('Texto_xpath', (xpath, texto, tiempo) => {
+    cy.xpath(xpath).should('be.visible').type(texto)
+    cy.wait(tiempo)
+})
+
+Cypress.Commands.add('Click', (selector, tiempo) => {
+    cy.get(selector).should('be.visible').click()
+    cy.wait(tiempo)
+})
+
+Cypress.Commands.add('Validar_error', (selector, mensaje) => {
+    cy.get(selector).should('be.visible').then((val) => {
+        cy.log(val.text()+mensaje)
+    })
+})
+
+
+// Comandos por bloque
+// Demo Seleniumeasy
+
+Cypress.Commands.add('Input_form_uno', (name, lastn, mail, phone, adress, city, tiempo) => {
+    cy.Texto(':nth-child(2) > .inputGroupContainer > .input-group > .form-control',name,tiempo)
+    cy.Texto(':nth-child(3) > .inputGroupContainer > .input-group > .form-control',lastn,tiempo)
+    cy.Texto(':nth-child(4) > .inputGroupContainer > .input-group > .form-control',mail,tiempo)
+    cy.Texto(':nth-child(5) > .inputGroupContainer > .input-group > .form-control',phone,tiempo)
+    cy.Texto(':nth-child(6) > .inputGroupContainer > .input-group > .form-control',adress,tiempo)
+    cy.Texto(':nth-child(7) > .inputGroupContainer > .input-group > .form-control',city,tiempo)
+})
+
+Cypress.Commands.add('Input_form_dos', (state, zip, web, host, desc, tiempo) => {    
+    cy.get('.selectContainer > .input-group > .form-control').should('be.visible').select(state)
+    cy.Texto(':nth-child(9) > .inputGroupContainer > .input-group > .form-control',zip,tiempo)
+    cy.Texto(':nth-child(10) > .inputGroupContainer > .input-group > .form-control',web,tiempo)
+    if(host=='Yes'){
+        cy.get(':nth-child(1) > label').should('be.visible').click()
+    }else if(host=='No'){
+        cy.get('div.col-md-4 > :nth-child(2) > label').should('be.visible').click
+    }
+    cy.Texto(':nth-child(12) > .inputGroupContainer > .input-group > .form-control',desc,tiempo)
+    cy.Click('.btn',tiempo)    
 })

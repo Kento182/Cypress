@@ -1,5 +1,7 @@
 /// <reference types='cypress'/>
 
+require('cypress-xpath')
+
 describe('Custom commands', () =>{
     let tiempo=1000
 
@@ -11,8 +13,9 @@ describe('Custom commands', () =>{
 
     it('Demo uno', () => {
         cy.log('hola')
-        cy.texto_visible('#wsf-1-field-21','Ricardo',tiempo)
-        cy.texto_visible('#wsf-1-field-22','González',tiempo)
-        cy.texto_visible('#wsf-1-field-23','González@gmail.com',tiempo)
+        cy.Texto('#wsf-1-field-21','Ricardo',tiempo)
+        cy.Texto('#wsf-1-field-22','González',tiempo)
+        cy.Texto_xpath("//input[@id='wsf-1-field-23']",'Gonz@gmail.com',tiempo)
+        cy.Click('#wsf-1-field-27',tiempo)
     })
 })
