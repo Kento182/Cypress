@@ -13,5 +13,8 @@
     "cypress": "^12.17.2",
     "cypress-plugin-tab": "^1.0.5",
     "cypress-xpath": "^2.0.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.3"
   }
 }

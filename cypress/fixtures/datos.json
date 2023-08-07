@@ -1,7 +1,7 @@
-{
-  "name": "Ricardo",
-  "surname": "Gonzalez",
-  "email": "hello@cypress.io",
-  "phone": "1234567890",
-  "adress": "calle 123"
-}
+[
+  {"name": "Ricardo1","surname": "Gonzalez1","email": "hello1@cypress.io","phone": "12345678901","adress": "calle1 123"},
+  {"name": "Ricardo2","surname": "Gonzalez2","email": "hello2@cypress.io","phone": "12345678902","adress": "calle2 123"},
+  {"name": "Ricardo3","surname": "Gonzalez3","email": "hello3@cypress.io","phone": "12345678903","adress": "calle3 123"},
+  {"name": "Ricardo4","surname": "Gonzalez4","email": "hello4@cypress.io","phone": "12345678904","adress": "calle4 123"},
+  {"name": "Ricardo5","surname": "Gonzalez5","email": "hello5@cypress.io","phone": "12345678905","adress": "calle5 123"}
+]

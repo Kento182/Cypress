@@ -16,4 +16,6 @@ CURSO CYPRESS.
 6.- npm install -D cypress-plugin-tab --> Usar tab 
     require('cypress-plugin-tab')
 
-7.- CSS and XPath checker --> Extención para selectores
+7.- CSS and XPath y SelectorsHub checker --> Extención para selectores
+
+8.- npm install @badeball/cypress-cucumber-preprocessor --> Instalar cucumber
