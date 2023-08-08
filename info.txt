@@ -18,4 +18,4 @@ CURSO CYPRESS.
 
 7.- CSS and XPath y SelectorsHub checker --> Extención para selectores
 
-8.- npm install @badeball/cypress-cucumber-preprocessor --> Instalar cucumber
+8.- npm install @badeball/cypress-cucumber-preprocessor --save-dev --> Instalar cucumber
