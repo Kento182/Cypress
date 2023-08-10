@@ -12,7 +12,10 @@ module.exports = defineConfig({
     },
     testIsolation: false,
     chromeWebSecurity: false,
-    
+    projectId: "xfz92c",
+    experimentalStudio: true
   },
   
 });
+
+// npx cypress run --record --key a4bcdbe1-10a5-44e2-899e-2a7f56c504f2
