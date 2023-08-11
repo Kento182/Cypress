@@ -12,7 +12,7 @@ module.exports = defineConfig({
     },
     testIsolation: false,
     chromeWebSecurity: false,
-    projectId: "xfz92c",
+    // projectId: "xfz92c",
     experimentalStudio: true
   },
   
